@@ -10,5 +10,8 @@ hugo
 mkdir -p /var/www/wtctf.afnom.net
 cp -r public/* /var/www/wtctf.afnom.net
 
-# certbot --non-interactive --nginx --redirect --domains wtctf.afnom.net --agree-tos --register-unsafely-without-email
+# letsencrypt
+certbot --non-interactive --nginx --redirect --domains wtctf.afnom.net --agree-tos --register-unsafely-without-email
+
+# restart nginx
 systemctl restart nginx
