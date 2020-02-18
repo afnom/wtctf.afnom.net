@@ -1,0 +1,43 @@
+@import "colors";
+
+body {
+  background-color: $background;
+
+  main {
+    margin: 2em;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    color: $foreground;
+    font-family: 'Hack', monospace;
+  }
+
+  h1 {
+    font-family: 'Agency FB', monospace;
+
+    font-size: 5em;
+    margin-bottom: 0.4em;
+  }
+
+  p {
+    line-height: 1.6em;
+    letter-spacing: 0.04em;
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  a {
+    color: $highlight;
+  }
+}
+
+@font-face {
+  font-family: 'Agency FB';
+  src: URL('/fonts/agencyfb.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: URL('/fonts/hack.ttf') format('truetype');
+}

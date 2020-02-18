@@ -1,0 +1,13 @@
+{{ define "head" }}
+  {{ with .Params.redirect }}
+    <script>
+      window.addEventListener('load', () => {
+        window.location = {{ . }};
+      });
+    </script>
+  {{ end }}
+{{ end }}
+
+{{ define "main" }}
+  {{ .Content }}
+{{ end }}

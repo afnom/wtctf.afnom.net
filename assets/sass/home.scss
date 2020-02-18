@@ -1,0 +1,39 @@
+@import "colors";
+
+body {
+  main {
+    .focus {
+      margin-top: 10vh;
+      width: 40vw;
+      margin-left: 20vw;
+
+      img {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    main {
+      .focus {
+        width: 60vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    main {
+      .focus {
+        margin-top: 2em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+      }
+    }
+  }
+}

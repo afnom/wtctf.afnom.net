@@ -1,0 +1,13 @@
+server {
+    server_name wtctf.afnom.net;
+    client_max_body_size 25m;
+
+    location / {
+        autoindex on;
+        root /var/www/ctctf.afnom.net;
+    }
+
+    location /hello {
+        return 301 https://example.com;
+    }
+}

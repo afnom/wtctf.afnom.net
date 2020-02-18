@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ with .Title }}
+      <title>{{ . }} | WhatTheCTF</title>
+    {{ else }}
+      <title>WhatTheCTF</title>
+    {{ end }}
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    {{ $sass := resources.Get "sass/theme.scss" }}
+    {{ $style := $sass | resources.ToCSS }}
+    <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}" />
+
+    {{ block "head" . }}{{ end }}
+  </head>
+
+  <body>
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+  </body>
+</html>
