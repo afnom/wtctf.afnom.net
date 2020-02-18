@@ -4,10 +4,10 @@ server {
 
     location / {
         autoindex on;
-        root /var/www/ctctf.afnom.net;
+        root /var/www/wtctf.afnom.net;
     }
 
-    location /hello {
+    location /signup {
         return 301 https://example.com;
     }
 }

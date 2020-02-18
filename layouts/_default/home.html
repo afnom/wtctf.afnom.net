@@ -1,7 +1,7 @@
 {{ define "head" }}
   {{ $sass := resources.Get "sass/home.scss" }}
   {{ $style := $sass | resources.ToCSS }}
-  <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}" />
+  <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}" />
 {{ end }}
 
 {{ define "main" }}

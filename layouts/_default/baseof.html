@@ -14,7 +14,7 @@
 
     {{ $sass := resources.Get "sass/theme.scss" }}
     {{ $style := $sass | resources.ToCSS }}
-    <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}" />
+    <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}" />
 
     {{ block "head" . }}{{ end }}
   </head>
