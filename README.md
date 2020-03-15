@@ -12,8 +12,6 @@ To build the site into the `public/` directory:
 
     $ hugo
 
-An example deployment is provided in the Vagrantfile for testing purposes.
-
 ## Development
 
 To run the live development server:
