@@ -1,0 +1,21 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  JEKYLL_ENV: production
+  LC_ALL: C.UTF-8
+
+pages:
+  image: debian
+  stage: build
+  only:
+    - master
+  script:
+    - wget "https://github.com/gohugoio/hugo/releases/download/v${hugo_version}/hugo_${hugo_version}_Linux-64bit.deb"
+    - sudo dpkg -i hugo_${hugo_version}_Linux-64bit.deb
+    - hugo
+  artifacts:
+    paths:
+      - public
+
